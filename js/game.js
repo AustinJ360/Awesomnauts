@@ -1,18 +1,33 @@
-
 /* Game namespace */
 var game = {
 
 	// an object where to store game information
 	data : {
 		// score
-		score : 0
+		score : 0, 
+		enemyBaseHealth: 10,
+		playerBaseHealth: 10,
+		enemyCreepHealth: 10,
+		playerHealth: 10,
+		enemyCreepAttack: 1,
+		playerAttack: 2,
+		orcBaseDamage: 10,
+		orcBaseHealth: 100,
+		orcBaseSpeed: 3,
+		orcBaseDefense: 0,
+		playerAttackTimer: 1000,
+		enemyCreepAttackTimer: 1000,
+		playerMoveSpeed: 5.5,
+		creepMoveSpeed: 5,
+		gameManager: "",
+		player: "",
 	},
 	
 	
 	// Run on page load.
 	"onload" : function () {
 	// Initialize the video.
-	if (!me.video.init("screen",  me.video.CANVAS, 1067, 600, true, '1.0')) {
+	if (!me.video.init("screen",  me.video.CANVAS, 1067, 600, true, '1.0')) {//fixed the website layout to able to play
 		alert("Your browser does not support HTML5 canvas.");
 		return;
 	}
@@ -43,14 +58,13 @@ var game = {
 		me.pool.register("PlayerBase", game.PlayerBaseEntity);
 		me.pool.register("EnemyBase", game.EnemyBaseEntity);
 		me.pool.register("EnemyCreep", game.EnemyCreep, true);
+		me.pool.register("Gloop", game.Gloop, true);
 		me.pool.register("GameManager", game.GameManager);
-
-
 
 		me.state.set(me.state.MENU, new game.TitleScreen());
 		me.state.set(me.state.PLAY, new game.PlayScreen());
 
 		// Start the game.
-		me.state.change(me.state.PLAY);
+		me.state.change(me.state.MENU);
 	}
 };

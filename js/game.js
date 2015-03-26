@@ -1,4 +1,3 @@
-
 /* Game namespace */
 var game = {
 
@@ -32,6 +31,7 @@ var game = {
 		win: "",
 		pausePos: "",
 		buyscreen: "",
+		buytext: ""
 	},
 	
 	

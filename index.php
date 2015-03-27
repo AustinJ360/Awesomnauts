@@ -30,7 +30,10 @@
 		<script type="text/javascript" src="js/entities/entities.js"></script>
 		<script type="text/javascript" src="js/entities/EnemyBaseEntity.js"></script>
 		<script type="text/javascript" src="js/entities/PlayerBaseEntity.js"></script>
-		<script type="text/javascript" src="js/entities/GameManager.js"></script>
+		<script type="text/javascript" src="js/gamemanagers/GameManager.js"></script>
+		<script type="text/javascript" src="js/gamemanagers/GameTimerManager.js"></script>
+		<script type="text/javascript" src="js/gamemanagers/SpendGold.js"></script>
+		<script type="text/javascript" src="js/gamemanagers/HeroDeathManager.js"></script>
 		<script type="text/javascript" src="js/entities/EnemyCreep.js"></script>
 		<script type="text/javascript" src="js/entities/Gloop.js"></script>
 		<script type="text/javascript" src="js/entities/HUD.js"></script>
@@ -44,7 +47,6 @@
 		<script type="text/javascript">
 			window.onReady(function onReady() {
 				game.onload();
-
 				// Mobile browser hacks
 				if (me.device.isMobile && !navigator.isCocoonJS) {
 					// Prevent the webview from moving on a swipe
@@ -53,13 +55,11 @@
 						window.scroll(0, 0);
 						return false;
 					}, false);
-
 					// Scroll away mobile GUI
 					(function () {
 						window.scrollTo(0, 1);
 						me.video.onresize(null);
 					}).defer();
-
 					me.event.subscribe(me.event.WINDOW_ONRESIZE, function (e) {
 						window.scrollTo(0, 1);
 					});

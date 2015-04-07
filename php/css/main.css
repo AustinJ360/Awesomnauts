@@ -1,0 +1,86 @@
+.readmore-js-toggle, .readmore-js-section {
+  display: block;
+  width: 100%;
+}
+.readmore-js-section {
+  overflow: hidden;
+}
+ 
+body{
+  background-image:url(http://oneiricindia.com/wp-content/uploads/2014/07/website-background-1.jpg);
+  background-size: 1366px 1600px;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+header{
+  background-color:#000000;
+  height:59px;
+  width:700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+    opacity: 0.7;
+    font-size: 40px;
+    color: #A9D8E8;
+    font-family: 'PT Serif', serif;
+
+}
+section{
+  background-color:#000000;
+  height:200px;
+  width:900px;
+  margin-left: auto;
+    margin-right: auto;
+    opacity: 0.7;
+    font-size: 35px;
+    color: #A9D8E8;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+div{
+  position: relative;
+  height: 600px;
+  width:700px;
+  margin: 5px;
+  padding: 5px;
+  color: #FFFFFF;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  text-align: center;
+}
+li{
+   position: fixed;
+  margin: 0px;
+  padding: 0px;
+   border:2px double ; 
+  text-align: center;
+
+}
+h2{
+  text-align: center;
+  font-size:35px;
+  font-family: 'Playfair Display', serif;
+}
+p{
+  padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+body {
+  background: darken(#34c4e8, 10%);
+  padding: 60px;
+}
+
+h1  {
+  color: lighten(#34c4e8, 30%);
+  font-family: 'Source Code Pro', sans-serif;
+  font-weight: 200;
+  margin: 0 0 40px;
+  terelative;text-align: center;
+}
+
+.post{
+  height: 500px;
+  width: 916px;
+  background-image: url(http://p1.pichost.me/i/58/1821360.jpg)
+}

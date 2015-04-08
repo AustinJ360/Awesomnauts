@@ -27,7 +27,7 @@ var game = {
 		spearTimer: 15,
 		player: "",
 		exp: 0,
-		gold: 0,
+		gold: 1,
 		ability1: 0,
 		ability2: 0,
 		ability3: 0,
@@ -43,7 +43,7 @@ var game = {
 		buyscreen: "",
 		buytext: "",
 		minimap: "",
-		miniplayer: ""
+		miniplayer: "",
 	},
 	
 	
@@ -95,6 +95,7 @@ var game = {
 		me.pool.register("ExperienceManager", game.ExperienceManager);
 		me.pool.register("SpendGold", game.SpendGold);
 		me.pool.register("spear", game.SpearThrow, true);
+		me.register("minimap", game.MiniMap, true);
 
 		me.state.set(me.state.MENU, new game.TitleScreen());
 		me.state.set(me.state.PLAY, new game.PlayScreen());

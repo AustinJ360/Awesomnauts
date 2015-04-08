@@ -3,10 +3,12 @@ game.PlayScreen = me.ScreenObject.extend({
 	 *  action to perform on state change
 	 */
 	onResetEvent: function() {
+		me.audio.playTrack("Savant-Splinter");
+
 		// reset the score
 		game.data.score = 0;
 
-		me.levelDirector.loadLevel("test2");//show and loads the level to play on the webtsite
+		me.levelDirector.loadLevel("level01");//show and loads the level to play on the webtsite
 
 		this.resetPlayer(0, 420);
 
@@ -22,7 +24,11 @@ game.PlayScreen = me.ScreenObject.extend({
 		var spendGold = me.pool.pull("SpendGold", 0, 0,{});
 		me.game.world.addChild(spendGold, 0);
 
+		game.data.minimap = me.pool.pull("minimap", 10, 10, {});
+		me.game.world.addChild(game.data.minimap, 30);
+
 		this.resetPlayer(10, 0);
+		
 		me.input.bindKey(me.input.KEY.B, "buy");
 		me.input.bindKey(me.input.KEY.Q, "skill1");
 		me.input.bindKey(me.input.KEY.W, "skill2");
@@ -42,6 +48,7 @@ game.PlayScreen = me.ScreenObject.extend({
 	 *  action to perform when leaving this screen (state change)
 	 */
 	onDestroyEvent: function() {
+		me.audio.stopTrack();
 		// remove the HUD from the game world
 		me.game.world.removeChild(this.HUD);
 	},

@@ -18,9 +18,9 @@ game.resources = [
 	{name: "woodpieces", type: "image", src:"data/img/woodpieces.png"},
 	{name: "treetiles", type: "image", src:"data/img/treetiles.png"},
 	{name: "AwesomenautsBG", type: "image", src:"data/img/AwesomenautsBG.png"},
-	{name: "minimap", type: "image", src:"data/img/minimap.png"},
 	{name: "load-screen", type: "image", src:"data/img/loadpic.png"},
 	{name: "new-screen", type: "image", src:"data/img/newpic.png"},
+	{name: "minimap", type: "image", src:"data/img/minimap.png"},
 
 
 
@@ -34,7 +34,7 @@ game.resources = [
 	 * {name: "example01", type: "tmx", src: "data/map/example01.tmx"},
 	 * {name: "example01", type: "tmx", src: "data/map/example01.json"},
  	 */
- 	 {name: "test2", type: "tmx", src: "data/map/test2.tmx"},//allows the level to load the game
+ 	 {name: "level01", type: "tmx", src: "data/map/test.tmx"},//allows the level to load the game
 	/* Background music. 
 	 * @example
 	 * {name: "example_bgm", type: "audio", src: "data/bgm/"},

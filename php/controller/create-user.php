@@ -5,7 +5,7 @@
 	$salt = "$5$" . "rounds=5000$" . uniqid(mt_rand(), true) . "$";//the salt for my password
 	$hashedPassword = crypt($password, $salt);
 	$query = $_SESSION["connection"]->query("INSERT INTO users SET "//the encrypted password and stored in the database
-			. "email = '$email', "//email value
+			. "email = '', "//email value
 			. "username = 'username', "//username value
 			. "password = '$hashedPassword', "//password value
 			. "salt = '$salt', "
@@ -23,4 +23,6 @@
 	 else {
 		echo "<p>" . $_SESSION["connection"]->error . "</p>";
 	}
+	
+
 	

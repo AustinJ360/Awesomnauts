@@ -9,7 +9,7 @@ var game = {
 		option1: "",
 		option2: "",
 		enemyBaseHealth: 5,
-		playerBaseHealth: 5,
+		playerBaseHealth: 10,
 		enemyCreepHealth: 10,
 		playerHealth: 10,
 		enemyCreepAttack: 1,
@@ -60,7 +60,7 @@ var game = {
 			me.plugin.register.defer(this, debugPanel, "debug");
 		});
 	}
-	
+
 	me.state.SPENDEXP = 112;
 	me.state.LOAD = 113;
 	me.state.NEW = 114;
